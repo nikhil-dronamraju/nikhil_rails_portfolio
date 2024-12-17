@@ -1,0 +1,56 @@
+<head>
+  <title>PORTFOLIO</title>
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+
+  <!-- begin:: UIkit  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/css/uikit.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit-icons.min.js"></script>
+  <!-- end:: UIKit -->
+
+  <!-- begin:: Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <!-- end:: Google Fonts -->
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <%= stylesheet_link_tag 'static.css', "data-turbo-track": "reload" %>
+</head>
+<body class="roboto-thin">
+  <!-- Begin:: Navbar Div -->
+  <div class="uk-container uk-container-large uk-animation-fade">
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+      <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+          <!-- Home Icon -->
+          <li class="uk-active">
+            <a href="<%= root_path %>" class="uk-icon-link navbar-home-svg" uk-icon="icon: home; ratio: 2"></a>
+          </li>
+          <!-- TODO:: Add more navbar tabs here, toggle icon active active state -->
+        </ul>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+          <li>
+            <a href="<%= about_me_path %>">About me</a>
+          </li>
+          <li>
+            <a href="<%= work_experience_path %>">Work experience</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- End:: Navbar Div -->
+  <%= yield %>
+</body>

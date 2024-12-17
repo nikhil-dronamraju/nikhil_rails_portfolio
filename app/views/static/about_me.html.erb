@@ -1,0 +1,54 @@
+<script type=text/javascript>
+    $( document ).ready( function() {
+      // Set up the initial text:
+      $( '#changeText' ).html( textHtmlArray[0] );
+      setInterval( swapText, 2000 );
+    });
+    const textHtmlArray = [
+        "<span class='uk-text-danger'>tech geek.</span>",
+        "<span class='uk-text-success'>dog owner.</span>",
+        "<span class='uk-text-primary'>music buff.</span>",
+        "<span class='uk-text-warning'>horror movie enthusiast.</span>",
+        "<span class='uk-text-muted'>Seahawks fan.</span>"
+    ];
+    let index = 1;
+    function swapText() {
+      $( '#changeText' ).fadeOut( 500, function() { // Fade out current text
+          $( this ).html( textHtmlArray[ index ] ).fadeIn( 500 ); // Fade in new text
+          index += 1; // Update the index
+          if ( index === textHtmlArray.length ) {
+            index = 0;
+          }
+      } );
+    }
+</script>
+<div class="uk-container uk-container-large uk-flex uk-margin-large uk-animation-fade">
+  <div class="uk-width-expand uk-flex-column">
+    <h1 class="uk-text-emphasis uk-text-bold">
+      I'm a <span id="changeText"></span>
+    </h1>
+    <div class="uk-light uk-width-3-5 uk-margin-auto" tabindex="-1" uk-slideshow="autoplay: true; autoplay-interval: 4000;">
+      <div class="uk-slideshow-items uk-border-rounded">
+        <div>
+          <img src="<%= image_url 'nikhil_restaurant.jpeg' %>" alt="Me at a restaurant" class="uk-object-contain" style="aspect-ratio: 1 / 1;">
+        </div>
+        <div>
+          <img src="<%= image_url 'zuko.jpeg' %>" alt="My dog" class="uk-object-contain uk-border-rounded" style="aspect-ratio: 1 / 1">
+        </div>
+        <div>
+          <img src="<%= image_url 'hereditary.jpg' %>" alt="My favorite movie" class="uk-object-contain uk-border-rounded" style="aspect-ratio: 1 / 1">
+        </div>
+      </div>
+
+      <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+      <a class="uk-position-center-right uk-position-small" href uk-slidenav-next uk-slideshow-item="next"></a>
+
+    </div>
+    <p>
+      My name is Nikhil Dronamraju.
+      I've been programming for around 3 years now, and during that time I've worked with Ruby on Rails, Next.JS,
+      Docker, RabbitMQ, AWS, Redis and many more. I've developed a deep appreciation for amazing architecture and
+      creative, cool projects, and love getting my hands on a good project. On the side, I'm a huge horror movie buff,
+      anime geek, music enthusiast, and like to lift weights too! Let's connect!
+  </div>
+</div>
