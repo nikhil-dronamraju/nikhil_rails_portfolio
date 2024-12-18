@@ -67,3 +67,5 @@ group :test do
 end
 
 gem "turbolinks", "~> 5.2"
+
+gem "dockerfile-rails", ">= 1.6", :group => :development
