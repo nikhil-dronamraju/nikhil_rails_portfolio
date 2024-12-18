@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   root "static#home"
   get "static/about_me", as: :about_me
   get "static/work_experience", as: :work_experience
+  get "static/projects", as: :projects
 end
