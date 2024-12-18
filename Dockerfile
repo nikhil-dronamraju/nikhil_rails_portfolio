@@ -33,7 +33,7 @@ RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential git pkg-config && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
-RUN sudo apt-get install libpq-dev
+RUN apt-get install libpq-dev
 
 # Install application gems
 COPY Gemfile Gemfile.lock ./
