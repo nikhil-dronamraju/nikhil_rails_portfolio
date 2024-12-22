@@ -22,27 +22,25 @@
         } );
     }
 </script>
-<div uk-parallax="opacity: 0,1; x: -100%, 0; end: 110%;" class="uk-container uk-container-large uk-flex">
+<div uk-parallax="x: -100%, 0; end: 110%;" class="uk-container uk-container-large uk-flex">
   <div class="uk-width-expand uk-flex-column uk-margin-large-top">
     <h1 class="uk-text-emphasis uk-text-bold">
       I'm a <span id="changeText"></span>
     </h1>
-    <div class="uk-light uk-width-3-5 uk-margin-auto" tabindex="-1" uk-slideshow="autoplay: true; autoplay-interval: 4000;">
-      <div class="uk-slideshow-items uk-border-rounded">
-        <div>
-          <img src="<%= image_url 'nikhil_restaurant.jpeg' %>" alt="Me at a restaurant" class="uk-object-contain" style="aspect-ratio: 1 / 1;">
+    <div class="uk-dark uk-position-relative uk-visible-toggle uk-width-3-5 uk-margin-auto" tabindex="-1" uk-slideshow="autoplay: false; autoplay-interval: 4000;">
+      <div class="uk-slideshow-items">
+        <div uk-slideshow-item="0">
+          <img src="<%= image_url 'nikhil_restaurant.jpeg' %>" alt="Me at a restaurant" class="uk-object-scale-down" uk-cover>
         </div>
-        <div>
-          <img src="<%= image_url 'zuko.jpeg' %>" alt="My dog" class="uk-object-contain uk-border-rounded" style="aspect-ratio: 1 / 1">
+        <div uk-slideshow-item="1">
+          <img src="<%= image_url 'zuko.jpeg' %>" alt="My dog" class="uk-object-scale-down" uk-cover>
         </div>
-        <div>
-          <img src="<%= image_url 'hereditary.jpg' %>" alt="My favorite movie" class="uk-object-contain uk-border-rounded" style="aspect-ratio: 1 / 1">
+        <div uk-slideshow-item="2">
+          <img src="<%= image_url 'hereditary.jpg' %>" alt="My favorite movie" class="uk-object-scale-down" uk-cover>
         </div>
       </div>
-      <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous uk-slideshow-item="previous"></a>
-      <a class="uk-position-center-right uk-position-small" href uk-slidenav-next uk-slideshow-item="next"></a>
+      <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
     </div>
-
     <div>
       <p class="roboto-light">
         My name is <span class="uk-text-success">Nikhil Dronamraju</span>.
