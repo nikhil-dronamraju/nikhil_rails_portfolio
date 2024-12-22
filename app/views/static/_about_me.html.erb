@@ -1,0 +1,64 @@
+<script type=text/javascript>
+    $( document ).ready( function() {
+        // Set up the initial text:
+        $( '#changeText' ).html( textHtmlArray[0] );
+        setInterval( swapText, 2000 );
+    });
+    const textHtmlArray = [
+        "<span class='uk-text-danger'>tech geek.</span>",
+        "<span class='uk-text-success'>dog owner.</span>",
+        "<span class='uk-text-primary'>music buff.</span>",
+        "<span class='uk-text-warning'>horror movie enthusiast.</span>",
+        "<span class='uk-text-muted'>Seahawks fan.</span>"
+    ];
+    let index = 1;
+    function swapText() {
+        $( '#changeText' ).fadeOut( 500, function() { // Fade out current text
+            $( this ).html( textHtmlArray[ index ] ).fadeIn( 500 ); // Fade in new text
+            index += 1; // Update the index
+            if ( index === textHtmlArray.length ) {
+                index = 0;
+            }
+        } );
+    }
+</script>
+<div uk-parallax="opacity: 0,1; x: -1000, 0; end: 120%;" class="uk-container uk-container-large uk-flex">
+  <div class="uk-width-expand uk-flex-column">
+    <h1 class="uk-text-emphasis uk-text-bold">
+      I'm a <span id="changeText"></span>
+    </h1>
+    <div class="uk-light uk-width-3-5 uk-margin-auto" tabindex="-1" uk-slideshow="autoplay: true; autoplay-interval: 4000;">
+      <div class="uk-slideshow-items uk-border-rounded">
+        <div>
+          <img src="<%= image_url 'nikhil_restaurant.jpeg' %>" alt="Me at a restaurant" class="uk-object-contain" style="aspect-ratio: 1 / 1;">
+        </div>
+        <div>
+          <img src="<%= image_url 'zuko.jpeg' %>" alt="My dog" class="uk-object-contain uk-border-rounded" style="aspect-ratio: 1 / 1">
+        </div>
+        <div>
+          <img src="<%= image_url 'hereditary.jpg' %>" alt="My favorite movie" class="uk-object-contain uk-border-rounded" style="aspect-ratio: 1 / 1">
+        </div>
+      </div>
+      <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+      <a class="uk-position-center-right uk-position-small" href uk-slidenav-next uk-slideshow-item="next"></a>
+    </div>
+
+    <div>
+      <p class="roboto-light">
+        My name is <span class="uk-text-success">Nikhil Dronamraju</span>.
+        From a technical standpoint, I'm a dev with over 2 years of experience doing work with the tech shown
+        above. My journey started off at Texas A&M University, where I was an industrial engineering major for 3 years. I ended up
+        realizing that programming and building things was something I genuinely enjoyed doing, and eventually landed my first job as a dev.
+        Since then, I've thrown myself into learning and building cool things on the internet!
+        <br>
+        <br>
+        From a more personal standpoint, I'm a big reader. These days, some of my favorite reads have been
+        <span class="uk-text-danger">Fight Club, Atomic Habits</span> and <span class="uk-text-danger">Man's Search for Meaning</span>.
+        <br>
+        <br>
+        <a href="https://www.youtube.com/@landonstrong9161" target="_blank">I also make music!</a>
+      </p>
+    </div>
+  </div>
+
+</div>

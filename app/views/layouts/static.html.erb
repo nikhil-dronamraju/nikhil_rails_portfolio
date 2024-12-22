@@ -28,48 +28,50 @@
   <script src="https://kit.fontawesome.com/997a973c8d.js" data-mutate-approach="sync" crossorigin="anonymous"></script>
 
 </head>
-<body class="roboto-thin">
-  <!-- Begin:: Navbar Div -->
-  <div class="uk-container uk-container-large">
-    <nav class="uk-navbar-container uk-navbar-transparent uk-animation-fade" uk-navbar>
-      <div class="uk-navbar-left">
-        <ul class="uk-navbar-nav">
-          <!-- Home Icon -->
-          <li class="uk-active">
-            <a href="<%= root_path %>">
-            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-            <svg class="home-icon-svg" width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
-              <path
-                stroke="<%= request.original_url == root_url ? 'black' : 'rgb(153, 153, 153)' %>"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
-                class="path"
-                d="M20 19v-8.5a1 1 0 0 0-.4-.8l-7-5.25a1 1 0 0 0-1.2 0l-7 5.25a1 1 0 0 0-.4.8V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1z"/></svg>
-            </a>
-          </li>
-          <!-- TODO:: Add more navbar tabs here, toggle icon active active state -->
-        </ul>
-      </div>
-      <div class="uk-navbar-right">
-        <ul class="uk-navbar-nav">
-          <li>
-            <a href="<%= about_me_path %>">About me</a>
-          </li>
-          <li>
-            <a href="<%= work_experience_path %>">Work experience</a>
-          </li>
-          <li>
-            <a href="<%= projects_path %>">Projects</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+<body class="roboto-thin page-body">
+  <div id="sticky_navbar_container" class="uk-container uk-container-large">
+    <!-- Begin:: Navbar Div -->
+    <div class="uk-container uk-container-expand">
+      <nav class="uk-navbar-container uk-navbar-transparent uk-animation-fade" uk-navbar>
+        <div class="uk-navbar-left">
+          <ul class="uk-navbar-nav">
+            <!-- Home Icon -->
+            <li class="uk-active">
+              <a href="<%= root_path %>">
+              <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg class="home-icon-svg" width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path
+                  stroke="<%= request.original_url == root_url ? 'black' : 'rgb(153, 153, 153)' %>"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  class="path"
+                  d="M20 19v-8.5a1 1 0 0 0-.4-.8l-7-5.25a1 1 0 0 0-1.2 0l-7 5.25a1 1 0 0 0-.4.8V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1z"/></svg>
+              </a>
+            </li>
+            <!-- TODO:: Add more navbar tabs here, toggle icon active active state -->
+          </ul>
+        </div>
+        <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav">
+            <li>
+              <a href="<%= about_me_path %>">About me</a>
+            </li>
+            <li>
+              <a href="<%= work_experience_path %>">Work experience</a>
+            </li>
+            <li>
+              <a href="<%= projects_path %>">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- End:: Navbar Div -->
   </div>
-  <!-- End:: Navbar Div -->
   <%= yield %>
 
-  <div class="container uk-position-bottom uk-flex">
+  <div class="container uk-flex">
     <div class="rail-2">
       <div class="uk-padding">
         <%= inline_svg_tag "ruby.svg"  %>
