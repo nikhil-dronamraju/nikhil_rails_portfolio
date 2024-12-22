@@ -146,8 +146,8 @@
 }
 
 .path {
-  stroke-dasharray: 64;
-  stroke-dashoffset: 64;
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
   animation: dash 2s linear forwards;
 }
 
@@ -207,4 +207,17 @@
 .rounded-border {
   border: 1px solid #999;
   border-radius: 5px;
+}
+
+.home-image-overlay {
+  max-width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.home-image {
+  position: relative;
+  left: 1rem;
+  top: 1rem;
 }
