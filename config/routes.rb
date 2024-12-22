@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "static#home"
-  get "static/about_me", as: :about_me
   get "static/work_experience", as: :work_experience
   get "static/projects", as: :projects
 end
