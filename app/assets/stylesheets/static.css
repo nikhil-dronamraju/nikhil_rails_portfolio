@@ -1,15 +1,5 @@
 *, *:before, *:after { box-sizing: border-box; }
 
-.navbar-home-svg {
-  svg {
-    path {
-      color: #999;
-    }
-    fill: #999;
-  }
-  width: 32px;
-}
-
 .logo-container {
   position: relative;
   &:before {
@@ -147,4 +137,63 @@
 
 .uk-text-xlarge {
   font-size: 3em;
+}
+
+.path {
+  stroke-dasharray: 64;
+  stroke-dashoffset: 64;
+  animation: dash 2s linear forwards;
+}
+
+.home-icon-svg:hover {
+  path { stroke: black };
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rail {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  animation: 30s scroll infinite linear;
+}
+
+.rail-2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  animation: 30s scroll-2 infinite linear;
+}
+
+@keyframes scroll {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(100%);
+  }
+}
+
+@keyframes scroll-2 {
+  from {
+    transform: translate(-100%);
+  }
+  to {
+    transform: translate(0%);
+  }
 }

@@ -27,17 +27,26 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/997a973c8d.js" data-mutate-approach="sync" crossorigin="anonymous"></script>
 
-
 </head>
 <body class="roboto-thin">
   <!-- Begin:: Navbar Div -->
-  <div class="uk-container uk-container-large uk-animation-fade">
-    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+  <div class="uk-container uk-container-large">
+    <nav class="uk-navbar-container uk-navbar-transparent uk-animation-fade" uk-navbar>
       <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
           <!-- Home Icon -->
           <li class="uk-active">
-            <a href="<%= root_path %>" class="uk-icon-link navbar-home-svg" uk-icon="icon: home; ratio: 2"></a>
+            <a href="<%= root_path %>">
+            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="home-icon-svg" width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path
+                stroke="<%= request.original_url == root_url ? 'black' : 'rgb(153, 153, 153)' %>"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1"
+                class="path"
+                d="M20 19v-8.5a1 1 0 0 0-.4-.8l-7-5.25a1 1 0 0 0-1.2 0l-7 5.25a1 1 0 0 0-.4.8V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1z"/></svg>
+            </a>
           </li>
           <!-- TODO:: Add more navbar tabs here, toggle icon active active state -->
         </ul>
@@ -59,4 +68,35 @@
   </div>
   <!-- End:: Navbar Div -->
   <%= yield %>
+
+  <div class="container uk-position-bottom uk-flex">
+    <div class="rail-2">
+      <div class="uk-padding">
+        <%= inline_svg_tag "ruby.svg"  %>
+      </div>
+      <i class="fa-brands fa-2xl fa-java uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-js uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-python uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-react uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-android uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-jenkins uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-docker uk-padding"></i>
+      <i class="fa-solid fa-2xl fa-database uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-aws uk-padding"></i>
+    </div>
+    <div class="rail">
+      <div class="uk-padding">
+        <%= inline_svg_tag "ruby.svg"  %>
+      </div>
+      <i class="fa-brands fa-2xl fa-java uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-js uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-python uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-react uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-android uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-jenkins uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-docker uk-padding"></i>
+      <i class="fa-solid fa-2xl fa-database uk-padding"></i>
+      <i class="fa-brands fa-2xl fa-aws uk-padding"></i>
+    </div>
+  </div>
 </body>

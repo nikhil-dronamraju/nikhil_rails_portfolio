@@ -69,3 +69,5 @@ end
 gem "turbolinks", "~> 5.2"
 
 gem "dockerfile-rails", ">= 1.6", :group => :development
+
+gem "inline_svg", "~> 1.10"
