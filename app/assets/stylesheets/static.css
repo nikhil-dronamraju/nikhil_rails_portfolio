@@ -3,6 +3,10 @@
   height: 100vh;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 *, *:before, *:after { box-sizing: border-box; }
 
 
