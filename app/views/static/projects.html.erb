@@ -1,50 +1,60 @@
 <div class="uk-container uk-container-large uk-flex-column uk-margin-large uk-animation-fade">
   <h1 class="uk-text-emphasis uk-text-bold uk-text-warning">Projects</h1>
-  <div uk-slideshow="autoplay: true; autoplay-interval: 3000; pause-on-hover: true;" class="uk-margin-auto uk-width-1-2">
-    <div class="uk-slideshow-items">
-      <div class="uk-card uk-card-body uk-card-default uk-card-hover uk-border-rounded">
-        <h2 class="uk-text-bold uk-text-success">ParlayMonkey</h2>
-        <span class="uk-article-meta">March 2024 - Present</span>
-        <p>
-          ParlayMonkey is an online sports-betting platform that originally started off as an idea between me
-          and a couple of friends. Since then, it's evolved into somewhat of a passion project we've all been contributing into here and there.
-        </p>
-        <span><i>Since the repository contains other people's work, I decided to keep it private. Sorry about that!</i></span>
+  <div>
+    <article uk-parallax="color: white;" class="uk-article">
+      <h2 uk-parallax="color: white;" class="uk-article-title">ParlayMonkey</h2>
+      <p uk-parallax="color: white;" class="uk-article-meta">Mar 2023 - Present</p>
+      <p uk-parallax="color: white;" class="uk-text-lead">
+        ParlayMonkey is a passion project between myself and four of my close friends. It's an online sports betting platform
+        with a custom admin portal, PayPal payment integration, and real-time updating of odds. I'm mainly responsible
+        for development and maintenance of the app, while other team members handle design and gather the data we use to create
+        lines.
+      </p>
+      <div>
+        <span>Tech Used:</span>
+        <span>
+          T3 Stack (TailwindCSS, Next.JS, tRPC), Supabase, TypeScript, Jest, Cypress, PayPal API
+        </span>
+      </div>
+      <div>
+        <a href="https://www.lockspread.com/" target="_blank">Check out the project!</a>
+      </div>
+    </article>
+    <article uk-parallax="color: white;" class="uk-article">
+      <h2 uk-parallax="color: white;" class="uk-article-title">Pokemon: Auto Chess</h2>
+      <p uk-parallax="color: white;" class="uk-article-meta">Nov 2024 - Present</p>
+      <p uk-parallax="color: white;" class="uk-text-lead">
+        Pokemon Auto Chess is a fan-made multiplayer game combining elements from Auto Battler games (Like TFT, for example) with
+        the graphics and vibe of the Pokemon Mystery Dungeon series. The game has 6k+ players a day, and is run entirely by
+        volunteers.
+      </p>
+      <div>
+        Tech used: TypeScript, Colyseus, MongoDB, Firebase, Grafana, Cloudflare, DigitalOcean, Redis, Solarwinds
+      </div>
+      <div>
+        <a href="https://pokemon-auto-chess.com/" target="_blank">Check out the project!</a>
         <br>
-        <span>Tech used: TypeScript, Next.JS, Vercel, Supabase, Jest, Storybook, tRPC, Tailwind</span>
+        <a href="https://github.com/keldaanCommunity/pokemonAutoChess" target="_blank">Check out the repo!</a>
         <br>
-        <a href="https://www.lockspread.com/">Check it out here!</a>
+        <a href="https://cdn.discordapp.com/attachments/1268146688313266288/1283359991574827089/pac.drawio.png?ex=676a8021&is=67692ea1&hm=65cb5255e26a3131caa4d23bb61903ddc794e4a06a863efc0d18b939cad391bb&" target="_blank">
+          Architecture
+        </a>
+      </div>
+    </article>
+    <article uk-parallax="color: white;" class="uk-article">
+      <h1 uk-parallax="color: white;" class="uk-article-title"><a class="uk-link-reset" href="">Glucose Monitor</a></h1>
+      <p uk-parallax="color: white;" class="uk-article-meta">Aug 2024 - Current</p>
+      <p uk-parallax="color: white;" class="uk-text-lead">
+        The Glucose Monitor is an app that alerts users if their glucose levels are unstable. Users can input their glucose values
+        when fasting or after eating. Depending on these inputs, it will calculate a score for users, and notify them based on that.
+      </p>
+      <div>
+        Tech used: Kotlin, Room, SQLite
+      </div>
+      <div class="uk-grid-small uk-child-width-auto" uk-grid>
+        <a href="https://github.com/nikhil-dronamraju/glucose" target="_blank">Check out the repo!</a>
       </div>
 
-      <div class="uk-card uk-card-body uk-card-primary uk-card-hover uk-border-rounded">
-        <h2 class="uk-text-bold">Portfolio/Website</h2>
-        <span class="uk-article-meta">Dec 2024 - Present</span>
-        <p>
-          This portfolio was honestly made in-part due to the fact that my previous one was heavily outdated, and because
-          I wanted to try out the new Rails 8 version. Since it's my first attempt at Rails 8, I decided to put it on here.
-        </p>
-        <span>Tech used: Rails 8, UIkit</span>
-        <br>
-        <a href="https://github.com/nikhil-dronamraju/nikhil_rails_portfolio" target="_blank">Check the repo out!</a>
-      </div>
-
-      <div class="uk-card uk-card-body uk-card-secondary uk-card-hover uk-border-rounded">
-        <h2 class="uk-text-bold uk-text-primary">Glucose Monitor</h2>
-        <span class="uk-article-meta">Aug 2024 - Present</span>
-        <p>
-          A mobile app, made for Android devices that allows users to input their glucose-related data and alerts them to
-          if their levels are stable or not.
-        </p>
-        <span>Tech used: Kotlin, Room, SQLite</span>
-        <br>
-        <a href="https://github.com/nikhil-dronamraju/glucose" target="_blank">Check the repo out!</a>
-      </div>
-    </div>
-    <i>Click to pause</i>
-  </div>
-
-  <!-- Prepare a container for your calendar. -->
-  <div class="uk-width-1-1 uk-flex uk-margin uk-animate-fade">
-    <img src="http://ghchart.rshah.org/nikhil-dronamraju" alt="2016rshah's Github chart" class="uk-margin-auto" />
+    </article>
   </div>
 </div>

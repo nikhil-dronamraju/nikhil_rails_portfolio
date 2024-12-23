@@ -27,63 +27,73 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/997a973c8d.js" data-mutate-approach="sync" crossorigin="anonymous"></script>
 
+  <!-- Mobile redirection -->
+  <script>
+    if ( request.user_agent =~ /Mobile|webOS/ ) {
+      alert( 'WTF' );
+    }
+  </script>
 </head>
 <body uk-parallax="background-color: black; color: white; end: 60%;" class="roboto-thin" style="overflow-x: hidden;">
-  <div id="sticky_navbar_container" class="uk-container uk-container-large">
-    <!-- Begin:: Navbar Div -->
-    <div class="uk-container uk-container-expand">
-      <nav class="uk-navbar-container uk-navbar-transparent uk-animation-fade" uk-navbar>
-        <div class="uk-navbar-left">
-          <ul class="uk-navbar-nav">
-            <!-- Home Icon -->
-            <li class="uk-active">
-              <a href="<%= root_path %>">
-                <%= inline_svg_tag 'n.svg', class: 'home-icon-svg' %>
-              </a>
-            </li>
-            <!-- TODO:: Add more navbar tabs here, toggle icon active active state -->
-          </ul>
-        </div>
-        <div class="uk-navbar-right">
-          <ul class="uk-navbar-nav">
-            <li>
-              <a href="<%= work_experience_path %>">Work experience</a>
-            </li>
-            <li>
-              <a href="<%= projects_path %>">Projects</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+  <div class="uk-visible@l">
+    <div id="sticky_navbar_container" class="uk-container uk-container-large">
+      <!-- Begin:: Navbar Div -->
+      <div class="uk-container uk-container-expand">
+        <nav class="uk-navbar-container uk-navbar-transparent uk-animation-fade" uk-navbar>
+          <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+              <!-- Home Icon -->
+              <li class="uk-active">
+                <a href="<%= root_path %>">
+                  <%= inline_svg_tag 'n.svg', class: 'home-icon-svg' %>
+                </a>
+              </li>
+              <!-- TODO:: Add more navbar tabs here, toggle icon active active state -->
+            </ul>
+          </div>
+          <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+              <li>
+                <a href="<%= work_experience_path %>">Work experience</a>
+              </li>
+              <li>
+                <a href="<%= projects_path %>">Projects</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- End:: Navbar Div -->
     </div>
-    <!-- End:: Navbar Div -->
+    <%= yield %>
+    <div class="container uk-flex">
+      <div class="rail-2">
+        <i class="fa-solid fa-2xl fa-gem uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-java uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-js uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-python uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-react uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-android uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-jenkins uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-docker uk-padding"></i>
+        <i class="fa-solid fa-2xl fa-database uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-aws uk-padding"></i>
+      </div>
+      <div class="rail">
+        <i class="fa-solid fa-2xl fa-gem uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-java uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-js uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-python uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-react uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-android uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-jenkins uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-docker uk-padding"></i>
+        <i class="fa-solid fa-2xl fa-database uk-padding"></i>
+        <i class="fa-brands fa-2xl fa-aws uk-padding"></i>
+      </div>
+    </div>
   </div>
-  <%= yield %>
-
-  <div class="container uk-flex">
-    <div class="rail-2">
-      <i class="fa-solid fa-2xl fa-gem uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-java uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-js uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-python uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-react uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-android uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-jenkins uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-docker uk-padding"></i>
-      <i class="fa-solid fa-2xl fa-database uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-aws uk-padding"></i>
-    </div>
-    <div class="rail">
-      <i class="fa-solid fa-2xl fa-gem uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-java uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-js uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-python uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-react uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-android uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-jenkins uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-docker uk-padding"></i>
-      <i class="fa-solid fa-2xl fa-database uk-padding"></i>
-      <i class="fa-brands fa-2xl fa-aws uk-padding"></i>
-    </div>
+  <div style="height: 100%;" class="rounded-border uk-visible@s uk-hidden@l uk-flex uk-flex-column uk-flex-center uk-flex-middle roboto-bold">
+    Please display this page on larger laptops/desktop only.
   </div>
 </body>
