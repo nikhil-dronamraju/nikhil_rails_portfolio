@@ -1,8 +1,10 @@
 <script type=text/javascript>
     $( document ).ready( function() {
         // Set up the initial text:
-        $( '#changeText' ).html( textHtmlArray[0] );
-        setInterval( swapText, 2000 );
+        $( '.change-text' ).html( textHtmlArray[0] );
+        $( '.tech-list' ).html( techList[0] );
+        setInterval( swapText, 2000, '.change-text', textHtmlArray );
+        setInterval( swapText, 2500, '.tech-list', techList );
     });
     const textHtmlArray = [
         "<span class='uk-text-danger'>tech geek.</span>",
@@ -11,10 +13,30 @@
         "<span class='uk-text-warning'>horror movie enthusiast.</span>",
         "<span class='uk-text-muted'>Seahawks fan.</span>"
     ];
+
+    const techList = [
+        "<span class='uk-text-danger'>Rails.</span>",
+        "<span class='uk-text-success'>React ( Next.JS, Remix ).</span>",
+        "<span class='uk-text-primary'>Android</span>",
+        "<span class='uk-text-warning'>React Native</span>",
+        "<span class='uk-text-muted'>Sinatra</span>",
+        "<span class='uk-text-muted'>Jenkins</span>",
+        "<span class='uk-text-muted'>Docker</span>",
+        "<span class='uk-text-muted'>PostgreSQL</span>",
+        "<span class='uk-text-muted'>MongoDB</span>",
+        "<span class='uk-text-muted'>Redis</span>",
+        "<span class='uk-text-muted'>SQLite</span>",
+        "<span class='uk-text-muted'>AWS</span>",
+        "<span class='uk-text-danger'>Ruby.</span>",
+        "<span class='uk-text-success'>JavaScript (EcmaScript/TypeScript).</span>",
+        "<span class='uk-text-primary'>Kotlin.</span>",
+        "<span class='uk-text-warning'>Python.</span>"
+    ];
+
     let index = 1;
-    function swapText() {
-        $( '#changeText' ).fadeOut( 500, function() { // Fade out current text
-            $( this ).html( textHtmlArray[ index ] ).fadeIn( 500 ); // Fade in new text
+    function swapText( htmlClass, htmlArr ) {
+        $( htmlClass ).fadeOut( 500, function() { // Fade out current text
+            $( this ).html( htmlArr[ index ] ).fadeIn( 500 ); // Fade in new text
             index += 1; // Update the index
             if ( index === textHtmlArray.length ) {
                 index = 0;
@@ -22,10 +44,10 @@
         } );
     }
 </script>
-<div id="about_me" uk-parallax="x: -100%, 0; end: 110%;" class="uk-container uk-container-large uk-flex">
+<div id="about_me" uk-parallax="x: -100%, 0; end: 110%; media: @l" class="uk-container uk-container-large uk-flex uk-visible@l">
   <div class="uk-width-expand uk-flex-column uk-margin-large-top">
-    <h1 class="uk-text-bold" style="color: white;">
-      I'm a <span id="changeText"></span>
+    <h1 class="uk-text-bold">
+      I'm a <span class="change-text"></span>
     </h1>
     <div class="uk-light uk-position-relative uk-visible-toggle uk-width-3-5 uk-margin-auto" tabindex="-1" uk-slideshow="autoplay: false; autoplay-interval: 4000;">
       <div class="uk-slideshow-items">
@@ -60,3 +82,4 @@
   </div>
 
 </div>
+<hr class="uk-divider-icon"/>
