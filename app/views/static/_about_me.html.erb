@@ -44,13 +44,12 @@
         } );
     }
 </script>
-<hr class="uk-divider-icon">
-<div id="about_me" uk-parallax="x: -100%, 0; end: 110%; media: @l" class="uk-container uk-container-large uk-flex uk-visible@s">
+<div id="about_me" uk-parallax="x: -100%, 0; end: 110%; media: @l">
   <div class="uk-width-expand uk-flex-column">
-    <h1 class="uk-text-bold">
+    <h3 class="uk-heading-small uk-text-bold">
       I'm a <span class="change-text"></span>
-    </h1>
-    <div class="uk-light uk-position-relative uk-visible-toggle uk-width-3-5 uk-margin-auto" tabindex="-1" uk-slideshow="autoplay: false; autoplay-interval: 4000;">
+    </h3>
+    <div class="uk-light uk-position-relative uk-visible-toggle uk-width-3-5 uk-margin-auto uk-visible@l" tabindex="-1" uk-slideshow="autoplay: false; autoplay-interval: 4000;">
       <div class="uk-slideshow-items">
         <div uk-slideshow-item="0">
           <img src="<%= image_url 'nikhil_restaurant.jpeg' %>" alt="Me at a restaurant" class="uk-object-scale-down" uk-cover>
@@ -82,3 +81,7 @@
     </div>
   </div>
 </div>
+<a uk-scroll href="#work_exp" class="uk-flex uk-flex-center uk-animation-toggle uk-link-reset uk-visible@l">
+  <i class="fa-solid fa-caret-down fa-2xl uk-animation-shake"></i>
+</a>
+<hr class="uk-divider-icon">
