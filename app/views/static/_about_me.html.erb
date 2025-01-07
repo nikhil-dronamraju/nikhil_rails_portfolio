@@ -44,27 +44,17 @@
         } );
     }
 </script>
-<div id="about_me" uk-parallax="x: -100%, 0; end: 110%; media: @l">
+<div id="about_me">
   <div class="uk-width-expand uk-flex-column">
     <h3 class="uk-heading-small uk-text-bold">
       I'm a <span class="change-text"></span>
     </h3>
-    <div class="uk-light uk-position-relative uk-visible-toggle uk-width-3-5 uk-margin-auto uk-visible@l" tabindex="-1" uk-slideshow="autoplay: false; autoplay-interval: 4000;">
-      <div class="uk-slideshow-items">
-        <div uk-slideshow-item="0">
-          <img src="<%= image_url 'nikhil_restaurant.jpeg' %>" alt="Me at a restaurant" class="uk-object-scale-down" uk-cover>
-        </div>
-        <div uk-slideshow-item="1">
-          <img src="<%= image_url 'zuko.jpeg' %>" alt="My dog" class="uk-object-scale-down" uk-cover>
-        </div>
-        <div uk-slideshow-item="2">
-          <img src="<%= image_url 'hereditary.jpg' %>" alt="My favorite movie" class="uk-object-scale-down" uk-cover>
-        </div>
+    <div class="uk-flex rounded-border uk-background-secondary uk-padding">
+      <div class="uk-flex uk-flex-column">
+        <%= image_tag "zuko.jpeg", class: "uk-object-contain rounded-border" %>
+        <span class="text-white uk-text-center uk-margin">Meet Zuko!</span>
       </div>
-      <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
-    </div>
-    <div>
-      <p class="roboto-light">
+      <p class="uk-padding text-white">
         My name is <span class="uk-text-success">Nikhil Dronamraju</span>.
         From a technical standpoint, I'm a dev with over 2 years of experience working with the tech shown
         below. My journey started off at Texas A&M University, where I was an industrial engineering major for 3 years. I ended up
@@ -81,4 +71,3 @@
     </div>
   </div>
 </div>
-<hr class="uk-divider-icon">

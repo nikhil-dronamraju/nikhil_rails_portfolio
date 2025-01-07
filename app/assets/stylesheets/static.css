@@ -225,3 +225,7 @@
   left: 1rem;
   top: 1rem;
 }
+
+.text-white {
+  color: white;
+}
