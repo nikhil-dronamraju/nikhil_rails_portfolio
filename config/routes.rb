@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   root "static#home"
   get "static/work_experience", as: :work_experience
   get "static/projects", as: :projects
+  get "admin/index", as: :admin
+  get "admin/log_in", to: "admin#new", as: :new_admin
+  post "admin/create", as: :create_admin
 end
